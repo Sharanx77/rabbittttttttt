@@ -38,7 +38,6 @@
             z-index: 5;
         }
 
-        /* The Runaway Button */
         #runaway-btn {
             position: fixed;
             padding: 15px 20px;
@@ -68,7 +67,6 @@
             display: none;
         }
 
-        /* Scanner Styling */
         #scanner-box {
             display: none;
             margin: 20px 0;
@@ -155,17 +153,22 @@
         </div>
 
         <div id="final-page" class="hidden">
-            <h1 style="color: var(--primary);">To My Dear Sister ❤️</h1>
-            <p><strong>"A sister is a little bit of childhood that can never be lost."</strong></p>
-            <p>You’ve seen me build <strong>Flame Tracking Robots</strong> and struggle with <strong>Arduino circuits</strong>, but you're still the one circuit in my life that never short-circuits. Thanks for being the best!</p>
+            <h1 style="color: var(--primary);">To My Dearest Sister ❤️</h1>
+            <p><strong>"Distance means so little when someone means so much."</strong></p>
+            
+            <p style="font-size: 0.95rem; color: #555; text-align: left; background: #fff5f7; padding: 15px; border-radius: 15px; border-left: 5px solid var(--accent);">
+                Even though you weren't physically here to see me build my <b>Flame Tracking Robot</b> or struggle with <b>Verilog</b> code, you were still the signal that kept me going. 
+                <br><br>
+                Distance might be a high resistance, but our bond is a perfect conductor! You're the only <b>circuit</b> in my life that keeps me grounded and never short-circuits.
+            </p>
             
             <div class="joke">
-                BROTHER'S TRUTH:<br>
-                "My sister said she wanted something that would make her look like a princess. I told her to go to sleep... because that only happens in your dreams!" 😂
+                THE TRUTH:<br>
+                "I was going to send you a long-distance hug, but I realized I'm an ECE student... so I built this annoying website instead. It's much funnier than a hug!" 😂
             </div>
 
-            <button class="prize-btn" onclick="claimPrize()">CLAIM YOUR REAL PRIZE 🏆</button>
-            <p style="margin-top: 25px; font-size: 0.75rem; color: #777;">Love, Sharana Basava</p>
+            <button class="prize-btn" onclick="claimPrize()">CLAIM YOUR SURPRISE 🏆</button>
+            <p style="margin-top: 25px; font-size: 0.8rem; color: #888;">Missing you, Sharana Basava</p>
         </div>
     </div>
 
@@ -236,7 +239,7 @@
                         if(currentQ < questions.length) loadQuestion();
                         else startScanner();
                     } else {
-                        alert("ERROR: Wrong Sister Detected! Try again! 😂");
+                        alert("ERROR: Incorrect sister detected! Try again! 😂");
                     }
                 };
                 optionsDiv.appendChild(b);
@@ -248,7 +251,7 @@
             document.getElementById('scanner-ui').classList.remove('hidden');
             document.getElementById('scanner-box').style.display = 'block';
             
-            const statuses = ["LOCATING BRAIN...", "SEARCHING...", "ERROR: BRAIN NOT FOUND", "SCANNING FOR INTELLIGENCE...", "0% COMPLETED", "SYSTEM FAILURE: TOO MUCH DRAMA DETECTED"];
+            const statuses = ["LOCATING BRAIN...", "SEARCHING...", "ERROR: BRAIN NOT FOUND", "SCANNING FOR INTELLIGENCE...", "0% COMPLETED", "SYSTEM FAILURE: TOO MUCH DRAMA"];
             let i = 0;
             const interval = setInterval(() => {
                 document.getElementById('scan-status').innerText = statuses[i];
@@ -269,8 +272,8 @@
         }
 
         function claimPrize() {
-            alert("SCANNER RESULT: Intelligence too low to process prize. 😂");
-            alert("Just kidding! Go check your WhatsApp/Room for your real surprise! 🎁");
+            alert("SCANNER RESULT: Intelligence level critical. Surprise processing failed. 😂");
+            alert("Congratulations! You've successfully been pranked by your favorite engineer. Hope this brought a smile to your face today! 🎈");
         }
     </script>
 </body>
